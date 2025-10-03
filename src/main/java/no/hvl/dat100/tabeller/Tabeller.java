@@ -1,11 +1,9 @@
 package no.hvl.dat100.tabeller;
 
-
 public class Tabeller {
 
     // a)
     public static void skrivUt(int[] tabell) {
-
 
         for (int i = 0; i < tabell.length; i++) {
             System.out.print(tabell[i] + " ");
@@ -16,30 +14,27 @@ public class Tabeller {
     // b)
     public static String tilStreng(int[] tabell) {
 
-
         String tekst = "[";
-        for (int i=0; i<tabell.length;i++){
+        for (int i = 0; i < tabell.length; i++) {
             tekst += tabell[i];
-            if(i<tabell.length-1){
+            if (i < tabell.length - 1) {
                 tekst += ",";
             }
         }
-        tekst +="]";
+        tekst += "]";
         return tekst;
-
 
     }
 
     // c)
     public static int summer(int[] tabell) {
         int sum = 0;
-        for (int i = 0; i<tabell.length;i++) {
-            sum += i;
+        for (int i = 0; i < tabell.length; i++) {
+            sum += tabell[i];
 
         }
         return sum;
     }
-
 
     // d)
     public static boolean finnesTall(int[] tabell, int tall) {
@@ -54,20 +49,20 @@ public class Tabeller {
 
     // e)
     public static int posisjonTall(int[] tabell, int tall) {
-    for (int i = 0; i<tabell.length;i++){
-        if(tabell[i] == tall){
-            return i;
-        }
+        for (int i = 0; i < tabell.length; i++) {
+            if (tabell[i] == tall) {
+                return i;
+            }
 
-    }
+        }
         return -1;
     }
 
     // f)
     public static int[] reverser(int[] tabell) {
         int[] ny = new int[tabell.length];
-        for(int i = 0; i<tabell.length; i++){
-            ny[i]= tabell[tabell.length-1-i];
+        for (int i = 0; i < tabell.length; i++) {
+            ny[i] = tabell[tabell.length - 1 - i];
 
         }
         return ny;
@@ -76,11 +71,13 @@ public class Tabeller {
     // g)
     public static boolean erSortert(int[] tabell) {
         for (int i = 0; i < tabell.length; i++) {
-            if (tabell[i] < tabell[i - 1]) {
-                return false;
+            if (i < tabell.length & i > 0) {
+                if (tabell[i] < tabell[i - 1]) {
+                    return false;
 
-            } else {
-                return true;
+                } else {
+                    return true;
+                }
             }
         }
         return true;
@@ -88,17 +85,16 @@ public class Tabeller {
 
     // h)
     public static int[] settSammen(int[] tabell1, int[] tabell2) {
-        int [] ny = new int[tabell1.length + tabell2.length];
+        int[] ny = new int[tabell1.length + tabell2.length];
 
-        for (int i = 0; i<tabell1.length; i++){
-            ny[i]=tabell1[i];
+        for (int i = 0; i < tabell1.length; i++) {
+            ny[i] = tabell1[i];
         }
-        for (int i =0; i<tabell2.length;i++){
-            ny[tabell1.length + i]=tabell2[i];
+        for (int i = 0; i < tabell2.length; i++) {
+            ny[tabell1.length + i] = tabell2[i];
         }
         return ny;
 
     }
 
-
-    }
+}

@@ -34,32 +34,33 @@ public class Matriser {
     // c)
     public static int[][] skaler(int tall, int[][] matrise) {
 
-        // TODO
-        throw new UnsupportedOperationException("Metoden skaler ikke implementert");
+        int[][] ny_matrise = new int[matrise.length][matrise[0].length];
 
+        for (int i = 0; i < matrise.length; i++) {
+            for (int j = 0; j < matrise[i].length; j++) {
+                ny_matrise[i][j] = tall * matrise[i][j];
+            }
+        }
+        return ny_matrise;
     }
 
     // d)
     public static boolean erLik(int[][] a, int[][] b) {
-
-        // TODO
-        throw new UnsupportedOperationException("Metoden erLik ikke implementert");
-
+        if (a == b) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    // e)
-    public static int[][] speile(int[][] matrise) {
-
-        // TODO
-        throw new UnsupportedOperationException("Metoden speile ikke implementert");
-
-    }
-
-    // f)
-    public static int[][] multipliser(int[][] a, int[][] b) {
-
-        // TODO
-        throw new UnsupportedOperationException("Metoden multipliser ikke implementert");
-
-    }
+    // // e)
+    // public static int[][] speile(int[][] matrise) {
+    //     // TODO
+    //     throw new UnsupportedOperationException("Metoden speile ikke implementert");
+    // }
+    // // f)
+    // public static int[][] multipliser(int[][] a, int[][] b) {
+    //     // TODO
+    //     throw new UnsupportedOperationException("Metoden multipliser ikke implementert");
+    // }
 }
